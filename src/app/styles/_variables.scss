@@ -1,0 +1,45 @@
+// Основные цвета фона
+$color-bg-main: #FBF9F1;
+$color-sidebar-bg: #1A1A1A;
+$color-card-white: #FFFFFF;
+
+// Акцентные цвета 
+$color-accent-pink: #E892A9;
+$color-accent-yellow: #F7D47C;
+$color-accent-blue: #B8D1F3;
+$color-accent-purple: #D7C6F2;
+$color-accent-green: #A5D6A7;
+
+// Текст и нейтральные оттенки
+$color-text-main: #111111;
+$color-text-muted: #8E8E8E;
+$color-border: #E0E0E0;
+$color-button-gray: #F2F2F2;
+
+// Интерактивные элементы
+$color-btn-join: #333333;
+
+// Скругления
+$radius-lg: 24px;
+$radius-md: 16px;
+$radius-sm: 8px;
+
+// Скругления
+$radius-lg: 24px;
+$radius-md: 16px;
+$radius-sm: 8px;
+
+@font-face {
+    font-family: 'GoogleSans';
+    src: url('fonts/GoogleSans.ttf');
+}
+
+@font-face {
+    font-family: 'GoogleSansCode';
+    src: url('fonts/GoogleSansCode.ttf');
+}
+
+@font-face {
+    font-family: 'Montez';
+    src: url('fonts/Montez.ttf');
+}

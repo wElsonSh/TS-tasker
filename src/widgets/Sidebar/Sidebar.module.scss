@@ -1,0 +1,81 @@
+.sidebar {
+    width: 280px;
+    height: calc(100vh - 40px);
+    background-color: $color-sidebar-bg;
+    border-radius: $radius-lg;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+    // Внешний падинг сверху/снизу, боковые падинги убираем, чтобы скролл-зона была шире
+    padding: 30px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 0 24px; // Боковые отступы только для заголовка
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+    margin: 0;
+}
+
+.collapseBtn {
+    width: 22px;
+    height: 22px;
+    background-color: $color-accent-pink;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: -11px;
+    top: 38px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.scrollArea {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: visible; // Позволяем контенту выходить за рамки по горизонтали
+
+    // ПАДИНГИ ВНУТРИ: 24px дают место тултипам крайних столбцов
+    padding: 0 24px;
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+.footer {
+    padding: 20px 24px 0 24px;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logoutBtn {
+    background: none;
+    border: none;
+    color: $color-text-muted;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.2s;
+
+    &:hover {
+        color: #FF5F5F;
+    }
+}

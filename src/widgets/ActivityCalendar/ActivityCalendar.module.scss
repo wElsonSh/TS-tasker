@@ -1,0 +1,79 @@
+.section {
+    margin-bottom: 32px;
+    overflow: visible; // Тултипы должны быть видны за пределами секции
+}
+
+.title {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $color-text-muted;
+    margin-bottom: 16px;
+    letter-spacing: 0.8px;
+    font-weight: 600;
+}
+
+.calendarWrapper {
+    display: block;
+    position: relative;
+    overflow: visible;
+}
+
+.labels {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.num {
+    font-size: 8px;
+    color: $color-text-muted;
+    text-align: center;
+    font-family: 'GoogleSansCode', monospace;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    gap: 4px;
+    overflow: visible;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow: visible;
+}
+
+.day {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+
+    &:hover {
+        outline: 1px solid white;
+        transform: scale(1.15);
+        z-index: 10;
+    }
+
+    &.level1 {
+        background-color: rgba($color-accent-pink, 0.25);
+    }
+
+    &.level2 {
+        background-color: rgba($color-accent-pink, 0.5);
+    }
+
+    &.level3 {
+        background-color: rgba($color-accent-pink, 0.75);
+    }
+
+    &.level4 {
+        background-color: $color-accent-pink;
+    }
+}

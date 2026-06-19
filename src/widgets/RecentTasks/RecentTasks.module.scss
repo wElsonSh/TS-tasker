@@ -1,0 +1,43 @@
+.section {
+    margin-top: 20px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 12px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    background-color: #ffffff00;
+    border-radius: $radius-sm;
+    transition: all .2s ease;
+
+    &:hover {
+        background-color: #ffffff67;
+    }
+}
+
+.icon {
+    color: $color-accent-pink;
+    font-size: 14px;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
