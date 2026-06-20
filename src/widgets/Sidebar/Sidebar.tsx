@@ -7,7 +7,9 @@ export const Sidebar: React.FC = () => {
     return (
         <aside className={styles.sidebar}>
             <div className={styles.header}>
-                <h1 className={styles.logo}>intelly</h1>
+                <a href="/">
+                    <h1 className={styles.logo}>Tasker</h1>
+                </a>
             </div>
 
             <div className={styles.scrollArea}>

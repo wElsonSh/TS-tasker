@@ -11,6 +11,10 @@
     // Внешний падинг сверху/снизу, боковые падинги убираем, чтобы скролл-зона была шире
     padding: 30px 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 }
 
 .header {
@@ -22,10 +26,11 @@
 }
 
 .logo {
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 500;
     color: white;
     margin: 0;
+    font-family: 'Montez';
 }
 
 .collapseBtn {

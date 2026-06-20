@@ -3,6 +3,8 @@ import { Tooltip } from '../../shared/Tooltip/Tooltip';
 import styles from './ActivityCalendar.module.scss';
 
 export const ActivityCalendar: React.FC = () => {
+
+
     const weeks = Array.from({ length: 14 }, (_, i) => ({
         number: i + 1,
         days: Array.from({ length: 7 }, () => Math.floor(Math.random() * 5))

@@ -1,0 +1,80 @@
+.footer {
+    display: none;
+    position: fixed;
+    bottom: 20px; // Небольшой отступ от края экрана
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0 16px;
+
+    @media (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.container {
+    background-color: $color-sidebar-bg; // Темный фон как у сайдбара
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 450px;
+    height: 64px;
+    border-radius: 40px; // Форма пилюли (или используй 100px)
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    border: 1px solid rgba($color-card-white, 0.05); // Тонкая рамка для объема
+}
+
+.navItem {
+    background: none;
+    border: none;
+    text-decoration: none;
+    color: $color-text-muted; // Неактивные иконки серые
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 12px;
+    transition: all 0.2s ease-in-out;
+    -webkit-tap-highlight-color: transparent;
+
+
+    &.active {
+        color: $color-accent-blue; // Или любой другой акцентный цвет
+
+    }
+}
+
+.fabWrapper {
+    position: relative;
+    // Центрируем и немного приподнимаем
+    transform: translateY(-20%);
+}
+
+.fab {
+    background-color: $color-card-white; // Белая кнопка
+    color: $color-sidebar-bg; // Темная иконка внутри
+    border: none;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%; // Всегда круг
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    transition: all 0.2s ease;
+
+    &:active {
+        transform: scale(0.9);
+        background-color: $color-button-gray; // Слегка сереет при нажатии
+    }
+
+    svg {
+        // Делаем иконку "плюс" чуть жирнее для акцента
+        stroke-width: 3;
+    }
+}

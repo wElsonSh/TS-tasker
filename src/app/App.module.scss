@@ -1,0 +1,31 @@
+.appLayout {
+    display: flex;
+    min-height: 100vh;
+    background-color: $color-bg-main;
+    position: relative;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.mainContent {
+    flex: 1; // Занимает всё оставшееся пространство
+    padding: 20px; // Тот самый "небольшой отступ"
+
+    // Плавный переход при изменении размеров
+    transition: all 0.3s ease;
+
+    @media (min-width: 769px) {
+        // Если Sidebar имеет фиксированную ширину (например, 250px), 
+        // можно добавить margin-left, но если Sidebar просто стоит в flex-рядом, 
+        // padding-а будет достаточно.
+        margin-left: 0;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        // Делаем отступ снизу, чтобы контент не перекрывался футером
+        padding-bottom: 110px;
+    }
+}
